@@ -1,0 +1,31 @@
+---
+import "../styles/global.css";
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>Tucha 的博客</title>
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/asset/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/asset/css/fonts.css" />
+    <link rel="stylesheet" href="https://fastly.jsdelivr.net/gh/volantis-x/cdn-fontawesome-pro@master/css/all.min.css" media="all" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script data-cfasync="false" src="/asset/js/feature.js" is:inline></script>
+    <noscript>
+      <link rel="stylesheet" href="/asset/css/noscript.css" />
+    </noscript>
+  </head>
+  <body class="is-preload">
+    <slot />
+    <script src="https://fastly.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js" is:inline></script>
+    <script type="text/javascript" src="/asset/js/jquery.min.js" is:inline></script>
+    <script type="text/javascript" src="/asset/js/fetch.min.js" is:inline></script>
+    <script type="text/javascript" src="/asset/js/main.js" is:inline></script>
+  </body>
+</html>

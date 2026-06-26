@@ -1,0 +1,212 @@
+---
+// 导航组件：透明背景 + Lucide 图标 + 纯文字，点击展开下拉菜单
+---
+
+<nav class="nav">
+  <!-- 主页 -->
+  <a href="/" class="nav-item">
+    <i data-lucide="home"></i>
+    <span>主页</span>
+  </a>
+
+  <!-- 文章 -->
+  <a href="/articles" class="nav-item">
+    <i data-lucide="newspaper"></i>
+    <span>文章</span>
+  </a>
+
+  <!-- 我的（带下拉） -->
+  <div class="nav-item dropdown" data-dropdown>
+    <button class="dropdown-trigger">
+      <i data-lucide="user"></i>
+      <span>我的</span>
+      <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+    </button>
+    <div class="dropdown-menu">
+      <a href="/mine/anime" class="dropdown-item">
+        <i data-lucide="film"></i>
+        <span>追番</span>
+      </a>
+      <a href="/mine/diary" class="dropdown-item">
+        <i data-lucide="book-open"></i>
+        <span>日记</span>
+      </a>
+      <a href="/mine/album" class="dropdown-item">
+        <i data-lucide="image"></i>
+        <span>相册</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 关于（带下拉） -->
+  <div class="nav-item dropdown" data-dropdown>
+    <button class="dropdown-trigger">
+      <i data-lucide="circle-user-round"></i>
+      <span>关于</span>
+      <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+    </button>
+    <div class="dropdown-menu">
+      <a href="/about/me" class="dropdown-item">
+        <i data-lucide="user-round"></i>
+        <span>关于我</span>
+      </a>
+      <a href="/about/links" class="dropdown-item">
+        <i data-lucide="link"></i>
+        <span>友链</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 其他（带下拉） -->
+  <div class="nav-item dropdown" data-dropdown>
+    <button class="dropdown-trigger">
+      <i data-lucide="ellipsis"></i>
+      <span>其他</span>
+      <i data-lucide="chevron-down" class="dropdown-arrow"></i>
+    </button>
+    <div class="dropdown-menu">
+      <a href="/other/projects" class="dropdown-item">
+        <i data-lucide="folder-git-2"></i>
+        <span>项目展示</span>
+      </a>
+      <a href="/other/skills" class="dropdown-item">
+        <i data-lucide="wrench"></i>
+        <span>技能展示</span>
+      </a>
+      <a href="/other/timeline" class="dropdown-item">
+        <i data-lucide="clock"></i>
+        <span>时间线</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.2s;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    white-space: nowrap;
+  }
+
+  .nav-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 0.2s;
+    white-space: nowrap;
+  }
+
+  .dropdown-trigger:hover {
+    background: rgba(255, 255, 255, 0.15);
+  }
+
+  .dropdown-arrow {
+    transition: transform 0.2s;
+    width: 16px;
+    height: 16px;
+  }
+
+  .dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.25rem;
+    min-width: 140px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    z-index: 50;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    border-radius: 0.4rem;
+    transition: background 0.15s;
+  }
+
+  .dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+  }
+</style>
+
+<script>
+  import { createIcons, icons } from "lucide";
+
+  // 点击展开下拉菜单
+  document.querySelectorAll("[data-dropdown]").forEach((dropdown) => {
+    const trigger = dropdown.querySelector(".dropdown-trigger");
+    trigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.contains("open");
+
+      // 关掉其他所有下拉
+      document.querySelectorAll("[data-dropdown].open").forEach((d) => {
+        d.classList.remove("open");
+      });
+
+      // 切换当前
+      if (!isOpen) {
+        dropdown.classList.add("open");
+      }
+    });
+  });
+
+  // 点击页面其他地方关闭所有下拉
+  document.addEventListener("click", () => {
+    document.querySelectorAll("[data-dropdown].open").forEach((d) => {
+      d.classList.remove("open");
+    });
+  });
+
+  // 初始化 Lucide 图标
+  createIcons({ icons });
+</script>

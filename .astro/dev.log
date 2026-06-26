@@ -1,0 +1,45 @@
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Generated 1ms","label":"types","level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":" astro  v7.0.3 ready in 2252 ms\n┃ Local    http://localhost:4321/\n┃ Network  use --host to expose","label":"SKIP_FORMAT","level":"info"}
+{"message":"watching for file changes...","label":null,"level":"info"}
+{"message":"[200] / 85ms","label":null,"level":"info"}
+{"message":"[200] / 5ms","label":null,"level":"info"}
+{"message":"[console.error] TypeError: Failed to fetch\n    at HTMLDocument.<anonymous> (http://localhost:4321/asset/js/main.js:144:2)\n    at e (http://localhost:4321/asset/js/jquery.min.js:2:36552)\n    at http://localhost:4321/asset/js/jquery.min.js:2:36928","label":"vite","level":"error"}
+{"message":"[200] / 17ms","label":null,"level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"/src/styles/global.css","label":"watch","level":"info"}
+{"message":"[200] / 3ms","label":null,"level":"info"}
+{"message":"[404] /asset/css/fontawesome-all.min.css 6ms","label":null,"level":"info"}
+{"message":"[404] /blog 1ms","label":null,"level":"info"}
+{"message":"[200] / 4ms","label":null,"level":"info"}
+{"message":"[404] /asset/css/fontawesome-all.min.css 1ms","label":null,"level":"info"}
+{"message":"/src/pages/index.astro?astro&type=style&index=0&lang.css, /src/styles/global.css","label":"watch","level":"info"}
+{"message":"[200] / 59ms","label":null,"level":"info"}
+{"message":"[404] /asset/css/fontawesome-all.min.css 1ms","label":null,"level":"info"}
+{"message":"/src/pages/index.astro?astro&type=style&index=0&lang.css, /src/styles/global.css","label":"watch","level":"info"}
+{"message":"[200] / 58ms","label":null,"level":"info"}
+{"message":"[404] /asset/css/fontawesome-all.min.css 1ms","label":null,"level":"info"}
+{"message":"Configuration file updated. Restarting...","label":null,"level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"An error happened during full reload\nFailed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?\nError: Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?\n    at loadAndTransform (file:///E:/ClaudeCode/blog/node_modules/vite/dist/node/chunks/node.js:19714:31)","label":"vite","level":"error"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"[200] / 18ms","label":null,"level":"info"}
+{"message":"[404] /asset/css/fontawesome-all.min.css 1ms","label":null,"level":"info"}
+{"message":"connected.","label":"vite","level":"info"}
+{"message":"Re-optimizing dependencies because vite config has changed","label":"vite","level":"info"}
+{"message":"server restarted.","label":"vite","level":"info"}
+{"message":"[200] / 46ms","label":null,"level":"info"}
+{"message":"[404] /asset/css/fontawesome-all.min.css 47ms","label":null,"level":"info"}
+{"message":"[200] / 1ms","label":null,"level":"info"}
+{"message":"[404] /asset/css/fontawesome-all.min.css 1ms","label":null,"level":"info"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"An error happened during full reload\nFailed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?\nError: Failed to load url astro:server-app.js (resolved id: astro:server-app.js). Does the file exist?\n    at loadAndTransform (file:///E:/ClaudeCode/blog/node_modules/vite/dist/node/chunks/node.js:19714:31)","label":"vite","level":"error"}
+{"message":"program reload","label":"vite","level":"info"}
+{"message":"[200] / 18ms","label":null,"level":"info"}
+{"message":"[404] /asset/css/fontawesome-all.min.css 1ms","label":null,"level":"info"}
