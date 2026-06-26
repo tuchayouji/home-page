@@ -218,13 +218,13 @@ $('.btn-mobile-menu__icon').click(function () {
 });
 
 //title
-// 在脚本开始时保存原始标题（假设原始标题不包含时间信息）
-var originalTitle = "Tucha"; // 根据实际情况调整
+// 在脚本开始时保存原始标题
+var originalTitle = "Tucha的小窝"; // 根据实际情况调整
 
 function updateTimeTitle() {
   // 获取当前时间
   var currentDateTime = new Date();
-  
+
   // 格式化时间。以下格式为：小时
   var hour = currentDateTime.getHours();
 
@@ -252,4 +252,3 @@ function updateTimeTitle() {
 
 // 定期更新标题以保持时间更新
 setInterval(updateTimeTitle, 1000);
-  
